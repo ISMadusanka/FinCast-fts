@@ -1,7 +1,12 @@
 import argparse
 import os
+import sys
 import pandas as pd
 from types import SimpleNamespace
+
+# Add src to python path so we can import internal modules
+sys.path.append(os.path.join(os.path.dirname(__file__), "src"))
+
 from tools.inference_utils import FinCast_Inference
 
 def main():

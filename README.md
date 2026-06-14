@@ -85,3 +85,13 @@ We make **no guarantees** regarding the accuracy, reliability, or suitability of
 - This software does **not constitute financial advice**.  
 - The authors and contributors **are not responsible** for any financial losses, damages, or other consequences arising from the use of this model or its outputs.  
 - Users should evaluate and use the model **at their own risk**.  
+
+
+python run_inference.py `
+  --data "1.052, 1.054, 1.051, 1.055, 1.058, 1.060, 1.059, 1.062, 1.065, 1.063, 1.061, 1.066, 1.068, 1.070, 1.069, 1.072, 1.071, 1.075, 1.078, 1.076, 1.074, 1.079, 1.082, 1.084, 1.083, 1.086, 1.085, 1.089, 1.092, 1.090, 1.088, 1.093" `
+  --model_path "weights\fincast_v1.pth" `
+  --backend "gpu" `
+  --data_frequency "m" `
+  --context_len 32 `
+  --horizon_len 3 `
+  --columns_target "Close"
